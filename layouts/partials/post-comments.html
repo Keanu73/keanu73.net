@@ -1,0 +1,44 @@
+<section class="post-comments">
+    <h3>Comments</h3>
+
+    {{ $entryId := .File.UniqueID }}
+
+    {{ with $.Site.Data.comments }}
+    {{ if isset $.Site.Data.comments $entryId }}
+    {{ range $index, $comments := (index $.Site.Data.comments $entryId) }}
+    <div class="post-comment">
+        <div class="post-comment-header">
+            <img class="post-comment-avatar" src="https://www.gravatar.com/avatar/{{ .email }}?s=100">
+            <p class="post-comment-info"><strong>{{ .name }}</strong><br>{{ dateFormat "02/01/2006" .date }}</p>
+        </div>
+        {{ .body | markdownify }}
+    </div>
+    {{ end }}
+    {{ end }}
+    {{ else }}
+    <p>Nothing yet.</p>
+    {{ end }}
+    
+    <h3>Say something</h3>
+    <form class="post-new-comment card-body" method="POST" action="{{ .Params.StaticmanURL }}">
+        <input type="hidden" name="options[redirect]" value="{{ .Permalink }}#comment-submitted">
+        <input type="hidden" name="options[entryId]" value="{{ .File.UniqueID }}">
+        <div class="row">
+            <input name="fields[name]" type="text" class="post-comment-field col-md-4" placeholder="Your name">
+            <input name="fields[email]" type="email" class="post-comment-field col-md-4" placeholder="Your email address">
+        </div>
+        <div class="row">
+            <textarea name="fields[body]" class="post-comment-field col-md-8"
+                placeholder="Your message. Feel free to use Markdown." rows="10"></textarea>
+        </div>
+        <div class="row">
+            <input type="submit" class="post-comment-field btn bg-light mt-md-2" value="Submit">
+        </div>
+    </form>
+</section>
+
+<div id="comment-submitted" class="dialog">
+    <h3>Thank you!</h3>
+    <p>Your comment has been submitted and will be published once it has been approved.</p>
+    <p><a href="#" class="btn">OK</a></p>
+</div>

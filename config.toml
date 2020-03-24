@@ -1,0 +1,26 @@
+baseURL = "https://keanu73.me"
+languageCode = "en-gb"
+title = "Keanu C."
+googleAnalytics = "UA-53637883-3"
+
+[menu]
+  [[menu.header]]
+    name = "mail"
+    weight = 0
+    url = "/mail"
+
+[params]
+  title = "Keanu C."
+  description = "I'm Keanu, a young programmer & hope-to-be entrepeneur."
+  images = ["aiden.png"]
+  
+  StaticmanURL = "https://api.staticman.net/v2/entry/keanu73/keanu73.github.io/master/comments"
+  GithubID = "Keanu73"
+  TwitterID = "Keanu73RBLX"
+  RedditID = "Keanu73"
+  Email= "keanu@keanu73.me"
+  Name = "Keanu C."
+  HeaderUsername = "keanu73"
+  HeaderHostname = "zion"
+  About = "Hiya, folks! I'm Keanu, and I'm a budding young person with a lot of time on their hands. I spend most of my days slumbering in my little corner of the world either programming, flying or controlling on VATSIM. I also moderate r/MemeEconomy and am currently developing for their reddit bot & website."
+  ProfilePicture = "/aiden.png"

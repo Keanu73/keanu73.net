@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+	<head>
+		<title>{{ .Site.Title }}</title>
+		{{ partial "head.html" . }}
+	</head>
+	<body>
+		{{ .Scratch.Set "command" "whoami" }}
+		{{ partial "header.html" . }}
+		<div class="animated fadeInDown delay-3s slower container wrapper">
+			{{ with .Site.Params.ProfilePicture }}
+			<div class="row">
+				<div class="col-sm-3 mx-auto">
+					<img alt="profile-picture" class="img-fluid rounded-circle user-picture center-block" src="{{.}}">
+				</div>
+			</div>
+			{{ end }}
+			<div class="row">
+				<div class="col-md-12 ml-md-3 user-profile text-center">
+					<h1 id="user-name">{{ .Site.Params.Name }}</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 mb-md-4 user-social text-center">
+				{{ partial "social.html" . }}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 p-md-3 mx-auto border border-white user-description text-center">
+					<p>{{ .Site.Params.About }}</p>
+				</div>
+			</div>
+		</div>
+		{{ partial "footer.html" . }}
+	</body>
+</html>

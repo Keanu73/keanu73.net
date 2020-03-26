@@ -1,44 +1,53 @@
+{{ $entryId := .File.UniqueID }}
+
 <section class="post-comments">
     <h3>Comments</h3>
-
-    {{ $entryId := .File.UniqueID }}
 
     {{ with $.Site.Data.comments }}
     {{ if isset $.Site.Data.comments $entryId }}
     {{ range $index, $comments := (index $.Site.Data.comments $entryId) }}
-    <div class="post-comment">
+    <div class="post-comment" id="{{ $entryId }}">
         <div class="post-comment-header">
-            <img class="post-comment-avatar" src="https://www.gravatar.com/avatar/{{ .email }}?s=100">
-            <p class="post-comment-info"><strong>{{ .name }}</strong><br>{{ dateFormat "02/01/2006" .date }}</p>
+            <img class="post-comment-avatar" src='https://www.gravatar.com/avatar/{{ md5 .email }}?s=100' />
+            <p class="post-comment-info">
+                From: <span class="post-comment-name">Keanu</span> 
+                {{ with .email }}
+                <span>&lt;{{ .email }}&gt;</span>
+                {{ end }}
+                <br />
+                <a href="{{ .Permalink }}#{{ $entryId }}" title="Permalink to this comment">
+                    <span>Subject: {{ .subject }}</span>
+                </a>
+                <br />
+                <span>Date: {{ .date.Format "Mon, 02 Jan 2006 15:04:05 -0700 " }}</span>
+            </p>
         </div>
         {{ .body | markdownify }}
     </div>
     {{ end }}
+    {{ else }}
+    <p>No one has dared to question the antics of Premier Krushchev.</p>
     {{ end }}
     {{ else }}
-    <p>Nothing yet.</p>
+    <p>No one has dared to question the antics of Premier Krushchev.</p>
     {{ end }}
-    
-    <h3>Say something</h3>
-    <form class="post-new-comment card-body" method="POST" action="{{ .Params.StaticmanURL }}">
-        <input type="hidden" name="options[redirect]" value="{{ .Permalink }}#comment-submitted">
-        <input type="hidden" name="options[entryId]" value="{{ .File.UniqueID }}">
-        <div class="row">
-            <input name="fields[name]" type="text" class="post-comment-field col-md-4" placeholder="Your name">
-            <input name="fields[email]" type="email" class="post-comment-field col-md-4" placeholder="Your email address">
-        </div>
-        <div class="row">
-            <textarea name="fields[body]" class="post-comment-field col-md-8"
-                placeholder="Your message. Feel free to use Markdown." rows="10"></textarea>
-        </div>
-        <div class="row">
-            <input type="submit" class="post-comment-field btn bg-light mt-md-2" value="Submit">
-        </div>
-    </form>
 </section>
 
-<div id="comment-submitted" class="dialog">
-    <h3>Thank you!</h3>
-    <p>Your comment has been submitted and will be published once it has been approved.</p>
-    <p><a href="#" class="btn">OK</a></p>
-</div>
+<h3>Roll up! Roll up! Freedom of speech is here! Stalin's gone!</h3>
+<form class="post-new-comment card-body" method="POST" action="{{ .Params.StaticmanURL }}">
+    <input type="hidden" name="options[link]" value="{{ .Permalink }}">
+    <input type="hidden" name="options[entryId]" value="{{ .File.UniqueID }}">
+    <div class="row">
+        <input name="fields[name]" type="text" class="post-comment-field col-md-4" placeholder="Your name" required>
+        <input name="fields[email]" type="email" class="post-comment-field col-md-4" placeholder="Your email" required>
+        <input name="fields[subject]" type="text" class="post-comment-field col-md-4" placeholder="Subject" required>
+    </div>
+    <div class="row">
+        <textarea name="fields[body]" class="post-comment-field col-md-12"
+            placeholder="The Censorship Bureau may or may not censor your message. The Ministry of Information would also like to proclaim how big this text box is and would ask you to 'graciously fill' it."
+            rows="10" required></textarea>
+    </div>
+    <div class="row">
+        <input type="submit" class="post-comment-field comment-submit-btn btn bg-dark mt-md-2" value="Submit">
+    </div>
+</form>

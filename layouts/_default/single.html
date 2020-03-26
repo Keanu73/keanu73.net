@@ -8,8 +8,10 @@
     </head>
 
     <body>
+        {{ $cmd := printf "%s %s" "mail read" .File.UniqueID }}
+		{{ .Scratch.Set "command" $cmd }}
         {{ partial "header.html" . }}
-        <div class="container wrapper">
+        <div class="animated fadeInUp delay-4s slower container wrapper">
             <span class="mt-md-4">From: Keanu C. &lt;keanu@keanu73.me&gt;</span>
             <br />
             <span>To: You</span>

@@ -14,7 +14,7 @@ googleAnalytics = "UA-53637883-3"
   description = "I'm Keanu, a young programmer & hope-to-be entrepeneur."
   images = ["aiden.png"]
   
-  StaticmanURL = "https://api.staticman.net/v2/entry/keanu73/keanu73.github.io/master/comments"
+  StaticmanURL = "https://api.staticman.net/v3/github/keanu73/keanu73.github.io/master/comments"
   GithubID = "Keanu73"
   TwitterID = "Keanu73RBLX"
   RedditID = "Keanu73"
@@ -24,3 +24,4 @@ googleAnalytics = "UA-53637883-3"
   HeaderHostname = "zion"
   About = "Hiya, folks! I'm Keanu, and I'm a budding young person with a lot of time on their hands. I spend most of my days slumbering in my little corner of the world either programming, flying or controlling on VATSIM. I also moderate r/MemeEconomy and am currently developing for their reddit bot & website."
   ProfilePicture = "/aiden.png"
+  Favicon = "/aiden.png"

@@ -180,11 +180,6 @@ i {
 	border-color: #292929;
 }
 
-.post-comments {
-	padding-top: 10px;
-	border-top-style: solid;
-}
-
 .wrapper {
 	min-height: 100%;
 	margin: 0 auto -50px;
@@ -199,4 +194,55 @@ i {
 
 td {
 	margin: 0 20px 0 20px;
+}
+
+.post-comments {
+	padding-top: 10px;
+	margin-bottom: 20px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+}
+
+.post-comment {
+   padding: 2rem 0rem;
+}
+
+.post-comment-header {
+   margin-bottom: 20px;
+}
+
+.post-comment .comment-message{
+  font-size: 1.7rem;
+}
+
+.post-comment-avatar {
+   display: inline-block;
+   vertical-align: middle;
+   border-radius: 50%;
+}
+
+.post-comment-info {
+   display: inline-block;
+   margin-left: 20px;
+   margin-bottom: 0;
+   vertical-align: middle;
+}
+
+.post-comment-info .post-comment-name {
+   font-size: 2rem;
+   font-weight: 500;
+}
+
+.comment-submit-btn {
+	color: white;
+	background-color: #292929;
+}
+
+.post-comment-info a {
+	text-decoration: none;
+	color: white;
+}
+
+.post-comment-info a:hover {
+	text-decoration: underline;
 }

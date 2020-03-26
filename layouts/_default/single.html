@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        {{ $cmd := printf "%s %s" "mail read" .File.UniqueID }}
+        {{ $cmd := printf "%s %d" "mail read" .Params.Id }}
 		{{ .Scratch.Set "command" $cmd }}
         {{ partial "header.html" . }}
         <div class="animated fadeInUp delay-4s slower container wrapper">

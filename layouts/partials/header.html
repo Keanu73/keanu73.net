@@ -1,7 +1,7 @@
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top font-header">
-	<div class="container-fluid">
-		<div class="navbar-header">
+	<div class="container-fluid title-bar">
+		<div class="w-100">
 			<a class="navbar-brand" href='{{ "/" | absLangURL }}'>
 				{{ .Site.Params.HeaderUsername }}@{{ .Site.Params.HeaderHostname }} ~ $ <span class="cursor-text">{{ .Scratch.Get "command" }}&nbsp;<span class="cursor">&nbsp;</span></span>
 			</a>
@@ -11,7 +11,7 @@
 				$(".cursor").css("-webkit-animation-timing-function", "steps({{ . | len | add 1 }}, end), steps(1)");
 			</script>
 			{{ end }}
-			<button type="button" class="navbar-toggler navbar-toggler-right float-right collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+			<button type="button" class="navbar-toggler navbar-toggler-right justify-content-end collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="navbar-toggler-icon"></span>
 			</button>

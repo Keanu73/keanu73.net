@@ -14,7 +14,6 @@ googleAnalytics = "UA-53637883-3"
   description = "I'm Keanu, a young programmer & hope-to-be entrepeneur."
   images = ["aiden.png"]
   
-  StaticmanURL = "https://keanu73-comments.herokuapp.com/v3/github/keanu73/keanu73.github.io/master/comments"
   GithubID = "Keanu73"
   TwitterID = "Keanu73RBLX"
   RedditID = "Keanu73"

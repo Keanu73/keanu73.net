@@ -10,7 +10,7 @@
         <div class="post-comment-header">
             <img class="post-comment-avatar" src='https://www.gravatar.com/avatar/{{ md5 .email }}?s=100' />
             <p class="post-comment-info">
-                From: <span class="post-comment-name">Keanu</span> 
+                From: <span class="post-comment-name">{{ .name }}</span> 
                 {{ with .email }}
                 <span>&lt;{{ .email }}&gt;</span>
                 {{ end }}

@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
+<head>
+    <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
 
-        {{ partial "head.html" . }}
-    </head>
+    {{ partial "head.html" . }}
+</head>
 
-    <body>
-        {{ $cmd := printf "%s %d" "mail read" .Params.Id }}
-		{{ .Scratch.Set "command" $cmd }}
-        {{ partial "header.html" . }}
-        <div class="animated fadeInDown delay-4s slower container wrapper">
-            <span class="mt-md-4">From: Keanu C. &lt;keanu@keanu73.me&gt;</span>
-            <br />
-            <span>To: You</span>
-            <br />
-            <span>Subject: <strong>{{ .Title }}</strong></span>
-            <br />
-            <span>Date: {{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700 " }}</span>
-            <div class="post-content">
-                {{ .Content }}
-            </div>
-            {{ if (isset .Params "nocomments")  }}
-            {{ else }}
-            {{ partial "post-comments.html" .}}
-            {{ end }}
+<body>
+    {{ $cmd := printf "%s %d" "mail read" .Params.Id }}
+    {{ .Scratch.Set "command" $cmd }}
+    {{ partial "header.html" . }}
+    <div class="animated fadeInUp delay-4s slower container wrapper">
+        <span class="mt-md-4">From: Keanu C. &lt;keanu@keanu73.me&gt;</span>
+        <br />
+        <span>To: You</span>
+        <br />
+        <span>Subject: <strong>{{ .Title }}</strong></span>
+        <br />
+        <span>Date: {{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700 " }}</span>
+        <div class="post-content">
+            {{ .Content }}
         </div>
-        {{ partial "footer.html" . }}
-    </body>
+        {{ if (isset .Params "nocomments")  }}
+        {{ else }}
+        {{ partial "post-comments.html" .}}
+        {{ end }}
+    </div>
+    {{ partial "footer.html" . }}
+</body>

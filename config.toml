@@ -11,7 +11,7 @@ googleAnalytics = "UA-53637883-3"
 
 [params]
   title = "Keanu C."
-  description = "I'm Keanu, a young programmer & hope-to-be entrepeneur."
+  description = "I'm Keanu, a young programmer who has too much time."
   images = ["aiden.png"]
   
   GithubID = "Keanu73"

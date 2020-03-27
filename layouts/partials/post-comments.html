@@ -19,7 +19,7 @@
                     <span>Subject: {{ .subject }}</span>
                 </a>
                 <br />
-                <span>Date: {{ .date.Format "Mon, 02 Jan 2006 15:04:05 -0700 " }}</span>
+                <span>Date: {{ dateFormat "Mon, 02 Jan 2006 15:04:05 -0700 " .date }}</span>
             </p>
         </div>
         {{ .body | markdownify }}

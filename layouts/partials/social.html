@@ -1,5 +1,5 @@
-{{ with .Site.Params.GnuPGFingerprint }}
-<a href="https://pgp.key-server.io/pks/lookup?op=vindex&search=0x{{.}}" title="GPG"><i class="fas fa-unlock-alt fa-3x" aria-hidden="true"></i></a>
+{{ with .Site.Params.KeybaseID }}
+<a href="https://keybase.io/{{.}}" rel="me" title="Keybase"><i class="fab fa-keybase fa-3x" aria-hidden="true"></i></a>
 {{ end }}
 {{ with .Site.Params.StackExchangeID }}
 <a href="https://stackexchange.com/users/{{.}}" rel="me" title="StackExchange"><i class="fab fa-stack-exchange fa-3x" aria-hidden="true"></i></a>
@@ -7,17 +7,11 @@
 {{ with .Site.Params.StackOverflowID }}
 <a href="https://stackoverflow.com/users/{{.}}" rel="me" title="StackExchange"><i class="fab fa-stack-overflow fa-3x" aria-hidden="true"></i></a>
 {{ end }}
-{{ with .Site.Params.SlackURL }}
-<a href="{{.}}" title="Slack"><i class="fab fa-slack fa-3x" aria-hidden="true"></i></a>
-{{ end }}
 {{ with .Site.Params.TwitterID }}
 <a href="https://twitter.com/{{.}}" rel="me" title="Twitter"><i class="fab fa-twitter fa-3x" aria-hidden="true"></i></a>
 {{ end }}
 {{ with .Site.Params.MastodonURL }}
 <a href="{{.}}" title="Mastodon"><i class="fab fa-mastodon fa-3x" aria-hidden="true"></i></a>
-{{ end }}
-{{ with .Site.Params.GoogleplusID }}
-<a href="https://plus.google.com/{{.}}/about" rel="me" title="Google+"><i class="fab fa-google-plus fa-3x" aria-hidden="true"></i></a>
 {{ end }}
 {{ with .Site.Params.FacebookID }}
 <a href="https://facebook.com/{{.}}" rel="me" title="Facebook"><i class="fab fa-facebook fa-3x" aria-hidden="true"></i></a>
@@ -58,10 +52,6 @@
 {{ with .Site.Params.PayPalMeID }}
 <a href="https://www.paypal.me/{{.}}" rel="me" title="PayPal.Me"><i class="fab fa-paypal fa-3x" aria-hidden="true"></i></a>
 {{ end }}
-{{ with .Site.Params.XingURL }}
-<a href="{{.}}" rel="me" title="XING"><i class="fab fa-xing fa-3x" aria-hidden="true"></i></a>
-{{ end }}
 {{ with .Site.Params.CvURL }}
 <a href="{{.}}" title="Curriculum Vitae"><i class="fas fa-file-alt fa-3x" aria-hidden="true"></i></a>
 {{ end }}
-

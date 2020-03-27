@@ -11,7 +11,7 @@ comments:
 
   # When allowedOrigins is defined, only requests sent from one of the domains
   # listed will be accepted.
-  allowedOrigins: ["localhost", "192.168.1.10", "keanu73.me"]
+  allowedOrigins: ["localhost", "192.168.1.10", "keanu73.net"]
 
   # (*) REQUIRED
   #
@@ -19,7 +19,7 @@ comments:
   # request.
   branch: "source"
 
-  commitMessage: "New comment in {options.slug}"
+  commitMessage: "New comment in {options.title}"
 
   filename: "{@id}"
 
@@ -47,7 +47,7 @@ comments:
   moderation: true
 
   # Name of the site. Used in notification emails.
-  name: "keanu73.me"
+  name: "keanu73.net"
 
   # (*) REQUIRED
   #

@@ -35,6 +35,8 @@
 
 <h3>Roll up! Roll up! Freedom of speech is here! Stalin's gone!</h3>
 <form class="post-new-comment card-body" method="POST" action="https://keanu73-comments.herokuapp.com/v2/entry/keanu73/keanu73.github.io/source/comments">
+    <input type="hidden" name="options[title]" value="{{ .Title }}">
+    <input type="hidden" name="options[redirect]" value="{{ .Permalink }}">
     <input type="hidden" name="options[entryId]" value="{{ .File.UniqueID }}">
     <input type="hidden" name="options[reCaptcha][siteKey]" value="6LcwVeQUAAAAAMeE1PT9d7B1A6Co2dhC0PSRpE5B">
     <input type="hidden" name="options[reCaptcha][secret]" value="GgE7exXrr3X2oa9WikyiuOXYmhb4fxGEXdtUsLsy7Pwu+EvOWvwJ40hwuLpkQKqn6o42nwVHxGIgLVa+U1H9L+cn3co0oUMaZ8J3IPkXZraRWZTqRkmVAZvvfwYLjmqQRjreZH1yFXat/AWvfFgM8mGircjubzCznDmU24nzeVg0Jhhf4ZTpwBvlBHQXvOVUARrJofV3/w+rZJ2Zy6SKgkY10EDv+XikvpXFHrIEWr+gZaLOSxPIZhKFDKs0PTp+hOzaEWPGPZH5FDnc9ykCo1kHGhVPwMWuqX7NJTR59c6mheBpQ/nrKH5ZwBkTBj9PkQhDf3VZHqtWL8SLP1B3CA==">

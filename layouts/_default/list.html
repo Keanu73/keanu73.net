@@ -9,7 +9,7 @@
 <body>
 	{{ .Scratch.Set "command" (lower (strings.TrimSuffix "s" .Title)) }}
 	{{ partial "header.html" . }}
-	<div class="animated fadeInUp delay-3s slower container wrapper">
+	<div class="animated fadeInDown delay-1s slow container wrapper">
 		<ul id="post-list">
 			{{ range .Paginator.Pages }}
 			<li>

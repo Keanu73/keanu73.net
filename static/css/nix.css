@@ -53,9 +53,9 @@ img {
     -webkit-box-sizing: border-box;
     border-left: .5em solid;
     
-    -webkit-animation: typing 3s steps(7, end) 1 normal forwards,
+    -webkit-animation: typing 1s steps(7, end) 1 normal forwards,
         blinking 1s step-end infinite;
-    animation: typing 3s steps(7, end) 1 normal forwards,
+    animation: typing 1s steps(7, end) 1 normal forwards,
         blinking 1s step-end infinite;
 }
 
@@ -90,6 +90,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @media (max-width: 767px) {
+	body {
+		font-size: 16px;
+	}
+
 	.cursor-text {
 	    font-size: 16px;
 	}
@@ -104,19 +108,23 @@ h1,h2,h3,h4,h5,h6 {
 	}
 
 	.user-picture {
-		border-style: solid;
-		border-width: 5px;
-		border-color: #fff;
+		height: auto;
+		width: 50vw;
 		margin: 15%;
+		margin-left: 20vw;
+		margin-bottom: 5vh;
 	}
 
 	.user-description {
 		margin: 10%;
 		margin-top: 0px;
+		margin-bottom: -20px;
 	}
 
-	.user-social {
-		margin: 10%;
+	.user-social i {
+		margin: 2.5%;
+		margin-bottom: 3vh;
+		margin-top: 3vh;
 	}
 }
 

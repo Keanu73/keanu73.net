@@ -8,11 +8,11 @@
     {{ range $index, $comments := (index $.Site.Data.comments $entryId) }}
     <div class="post-comment" id="{{ ._id }}">
         <div class="post-comment-header">
-            <img class="post-comment-avatar" src='https://www.gravatar.com/avatar/{{ md5 .email }}?s=100' />
+            <img class="post-comment-avatar" src='https://www.gravatar.com/avatar/{{ md5 .email }}?s=100&d=https%3A%2F%2Fkeanu73.net%2Fgorbachev.png' />
             <p class="post-comment-info">
                 From: <span>{{ .name }}</span> 
                 {{ with .email }}
-                <span>&lt;{{ .email }}&gt;</span>
+                <span>&lt;{{ . }}&gt;</span>
                 {{ end }}
                 <br />
                 <a href="{{ .Permalink }}#{{ ._id }}" title="Permalink to this comment">
@@ -26,10 +26,10 @@
     </div>
     {{ end }}
     {{ else }}
-    <p>No one has dared to question the antics of Premier Krushchev.</p>
+    <p>No one has dared to question the antics of Premier Gorbachev.</p>
     {{ end }}
     {{ else }}
-    <p>No one has dared to question the antics of Premier Krushchev.</p>
+    <p>No one has dared to question the antics of Premier Gorbachev.</p>
     {{ end }}
 </section>
 
@@ -47,7 +47,8 @@
     </div>
     <div class="row">
         <textarea name="fields[body]" class="post-comment-field col-md-12"
-            placeholder="The Censorship Bureau may or may not censor your message. The Ministry of Information would also like to proclaim how big this text box is and would ask you to 'graciously fill' it."
+            placeholder="The Censorship Bureau may or may not censor your message, and it may take a processing time of up to a few minutes for your comment to appear.
+            The Ministry of Information would also like to proclaim how big this text box is and would ask you to 'graciously fill' it."
             rows="10" required></textarea>
     </div>
     <div class="row mt-md-2">

@@ -6,7 +6,7 @@
     {{ with $.Site.Data.comments }}
     {{ if isset $.Site.Data.comments $entryId }}
     {{ range $index, $comments := (index $.Site.Data.comments $entryId) }}
-    <div class="post-comment" id="{{ $entryId }}">
+    <div class="post-comment" id="{{ ._id }}">
         <div class="post-comment-header">
             <img class="post-comment-avatar" src='https://www.gravatar.com/avatar/{{ md5 .email }}?s=100' />
             <p class="post-comment-info">

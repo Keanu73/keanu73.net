@@ -22,7 +22,7 @@
         <div class="post-content">
             {{ .Content }}
         </div>
-        {{ if (isset .Params "nocomments")  }}
+        {{ if (isset .Params "nocomments") }}
         {{ else }}
         {{ partial "post-comments.html" .}}
         {{ end }}

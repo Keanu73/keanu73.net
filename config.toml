@@ -11,7 +11,7 @@ googleAnalytics = "UA-53637883-3"
 
 [params]
   title = "Keanu C."
-  description = "I'm Keanu, a young programmer who has too much time."
+  description = "You have 1 unread message."
   images = ["aiden.png"]
   
   GithubID = "Keanu73"
@@ -22,6 +22,6 @@ googleAnalytics = "UA-53637883-3"
   Name = "Keanu C."
   HeaderUsername = "keanu73"
   HeaderHostname = "zion"
-  About = "Hiya, folks! I'm Keanu, and I'm a budding young person with a lot of time on their hands. I spend most of my days slumbering in my little corner of the world either programming, flying or controlling on VATSIM. I also moderate r/MemeEconomy and am currently developing for their reddit bot & website."
+  About = "Hello there. I'm Keanu, and I'm a young programmer with a lot of time on their hands. I spend most of my days either pre-meditating code and writing it. I also have a keen interest in flight simulation and FPS games, and on top of that I also control on VATSIM in my spare time. I work on lots of different projects for myself and all sorts of people - if you want to see some of them, you can check out my GitHub profile above."
   ProfilePicture = "/aiden.png"
   Favicon = "/aiden.png"

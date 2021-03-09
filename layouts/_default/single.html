@@ -22,10 +22,6 @@
         <div class="post-content">
             {{ .Content }}
         </div>
-        {{ if (isset .Params "nocomments") }}
-        {{ else }}
-        {{ partial "post-comments.html" .}}
-        {{ end }}
     </div>
     {{ partial "footer.html" . }}
 </body>

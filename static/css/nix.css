@@ -12,7 +12,7 @@ body {
 .footer {
 	background-color: #292929;
 	display: block;
-	min-width: 100vw;
+	min-width: 100%;
 	position: absolute;
 	bottom: 0;
 }
@@ -119,6 +119,7 @@ h1,h2,h3,h4,h5,h6 {
 		margin: 10%;
 		margin-top: 0px;
 		margin-bottom: -20px;
+		font-size: 20px;
 	}
 
 	.user-social i {
@@ -126,6 +127,12 @@ h1,h2,h3,h4,h5,h6 {
 		margin-bottom: 3vh;
 		margin-top: 3vh;
 	}
+}
+
+.user-description {
+	font-size: 16.5px;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 #user-name {

@@ -3,7 +3,7 @@ name: Deploy website to server
 on:
   push:
     branches:
-      - source
+      - master
 
 jobs:
   deploy:

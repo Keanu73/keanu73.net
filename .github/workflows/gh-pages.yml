@@ -1,4 +1,4 @@
-name: github pages
+name: Deploy website to server
 
 on:
   push:
@@ -7,8 +7,11 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    name: Deploy Hugo build to server
+    runs-on: ubuntu-latest
+
     steps:
+      - name: Checkout repository files
       - uses: actions/checkout@v2
         with:
           submodules: true
@@ -19,13 +22,16 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build
+      - name: Build Hugo website
         run: hugo --minify
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          cname: keanu73.net
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: master
+      - name: Deploy to server
+        uses: up9cloud/action-rsync@master
+        env:
+          HOST: ${{ secrets.HOST }}
+          USER: ${{ secrets.USER }}
+          KEY: ${{ secrets.KEY }}
+          VERBOSE: true
+          SOURCE: ./public
+          TARGET: /var/www/keanu73.net
+          ARGS: -avz --delete --exclude=.gitignore --exclude=.github/ --exclude=.git/

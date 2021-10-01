@@ -34,4 +34,4 @@ jobs:
           VERBOSE: true
           SOURCE: ./public/
           TARGET: /var/www/keanu73.net/
-          ARGS: -avz --delete --exclude=.gitignore --exclude=.github/ --exclude=.git/
+          ARGS: -avz -O --delete --exclude=.gitignore --exclude=.github/ --exclude=.git/

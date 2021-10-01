@@ -33,5 +33,5 @@ jobs:
           KEY: ${{ secrets.KEY }}
           VERBOSE: true
           SOURCE: ./public/
-          TARGET: /var/www/keanu73.net/
+          TARGET: /var/www/html/
           ARGS: -avz -O --delete --exclude=.gitignore --exclude=.github/ --exclude=.git/

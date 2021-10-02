@@ -9,7 +9,7 @@
 <body>
 	{{ .Scratch.Set "command" "whoami" }}
 	{{ partial "header.html" . }}
-	<div class="animated fadeInDown delay-1s slow container wrapper">
+	<div class="animated fadeIn delay-1s slow container wrapper">
 		{{ with .Site.Params.ProfilePicture }}
 		<div class="row">
 			<div class="col-lg-3 mx-auto">
@@ -18,7 +18,7 @@
 		</div>
 		{{ end }}
 		<div class="row">
-			<div class="col-md-12 ml-md-3 user-profile text-center">
+			<div class="col-md-12 user-profile text-center">
 				<h1 id="user-name">{{ .Site.Params.Name }}</h1>
 			</div>
 		</div>
@@ -28,16 +28,36 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6 p-md-1 mx-auto border border-white user-description text-center">
-				<p>Hello there. I'm Keanu, and I'm a young programmer with a lot of time on their hands. I spend most of my days either
-				pre-meditating code, or writing it. I also have a keen interest in flight simulation and FPS games, and on top of that I
-				also play a lot of Dead by Daylight in my spare time. I work on lots of different projects for myself and all sorts of people - if
-				you want to see some of them, you can check out my GitHub profile above.
-				<br /><br />
-				Any questions? Feel free to shoot me an email!</p>
+			<div class="col-md-6 p-md-1 mb-md-4 mx-auto border border-white user-description text-center">
+				<p>
+					Hello there. I'm Keanu, and I'm a young programmer with a lot of time on their hands.
+				</p>
+				
+				<p>
+					I spend most of my days either pre-meditating code, or writing it. I also have a keen interest in flight simulation and FPS games, 
+					and on top of that I also play a lot of Dead by Daylight in my spare time.
+				</p>
+				
+				<p>
+					I work on lots of different projects for myself and all sorts of people - if you want to see some of them,
+					you can check them out below.
+				</p>
+
+				<p>
+					Any questions? Feel free to shoot me an email!
+				</p>
 			</div>
 		</div>
+		<div class="row d-flex mx-auto ml-md-4 mb-md-4 text-center justify-content-center">
+			<div data="https://github.com/Keanu73/MarchyGuard" class="github-pinner"></div>
+			<div data="https://github.com/Keanu73/keanu73.net" class="github-pinner"></div>
+		</div>
+		<div class="row d-flex mx-auto ml-md-4 text-center justify-content-center">
+				<div data="https://github.com/Keanu73/2b2tQueueAlert" class="github-pinner"></div>
+				<div data="https://github.com/Keanu73/VotingSystem" class="github-pinner"></div>
+		</div>
 	</div>
+
 	{{ partial "footer.html" . }}
 </body>
 

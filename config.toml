@@ -1,6 +1,6 @@
 baseURL = "https://keanu73.net"
 languageCode = "en-gb"
-title = "Keanu C."
+title = "Keanu C"
 
 [menu]
   [[menu.header]]
@@ -9,16 +9,16 @@ title = "Keanu C."
     url = "/mail"
 
 [params]
-  title = "Keanu C."
+  title = "Keanu C"
   description = "You have 1 unread message."
   images = ["aiden.png"]
   
   GithubID = "Keanu73"
   TwitterID = "Keanu73RBLX"
   RedditID = "Keanu73"
+  SteamID = "keanu73"
   Email = "keanu@keanu73.net"
-  KeybaseID = "keanu73"
-  Name = "Keanu C."
+  Name = "Keanu C"
   HeaderUsername = "keanu73"
   HeaderHostname = "zion"
   ProfilePicture = "/aiden.png"

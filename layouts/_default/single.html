@@ -11,7 +11,7 @@
     {{ $cmd := printf "%s %d" "mail read" .Params.Id }}
     {{ .Scratch.Set "command" $cmd }}
     {{ partial "header.html" . }}
-    <div class="animated fadeInDown delay-1s slow container wrapper">
+    <div class="animated fadeIn delay-1s slow container wrapper">
         <span class="mt-md-4">From: Keanu C. &lt;keanu@keanu73.net&gt;</span>
         <br />
         <span>To: You</span>
@@ -25,3 +25,5 @@
     </div>
     {{ partial "footer.html" . }}
 </body>
+
+</html>

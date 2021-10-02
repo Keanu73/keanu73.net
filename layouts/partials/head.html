@@ -17,6 +17,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" async></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" async></script>
 
+<script src="{{ "js/GithubPinner.js" | absURL }}" async></script>
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" async>
 
@@ -24,6 +26,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" async>
 
 <!-- Custom CSS -->
+<link rel="stylesheet" href="{{ "css/githubPinner.css" | absURL }}" async>
 <link rel="stylesheet" href="{{ "css/nix.css" | absURL }}" async>
 
 <!-- favicon -->
@@ -32,9 +35,3 @@
 {{ end }}
 
 {{ template "_internal/opengraph.html" . }}
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet" async>
-
-<!-- Google Analytics -->
-{{ template "_internal/google_analytics_async.html" . }}

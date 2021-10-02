@@ -1,7 +1,6 @@
 baseURL = "https://keanu73.net"
 languageCode = "en-gb"
 title = "Keanu C."
-googleAnalytics = "UA-53637883-3"
 
 [menu]
   [[menu.header]]

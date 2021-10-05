@@ -1,5 +1,7 @@
-+++
-title = "{{ replace .Name "-" " " | title }}"
-date = {{ .Date }}
-draft = true
-+++
+---
+title: "{{ replace .Name "-" " " | title }}"
+description: "Default"
+date: {{ .Date }}
+draft: true
+id: 0
+---

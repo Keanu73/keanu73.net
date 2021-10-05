@@ -167,7 +167,8 @@ i {
 .post-header {
 	background-color: #292929;
 	overflow: hidden;
-	padding: 0 5px 0 5px;
+	padding: 0.5vh 0.5vw 0 0.5vw;
+	border-radius: 15px;
 }
 
 .post-content {
@@ -181,7 +182,11 @@ i {
 }
 
 .post-summary {
-	padding: 0 5px 0 5px;
+	padding: 0.5vw;
+}
+
+.post-summary p {
+	margin-bottom: 0;
 }
 
 .post-list-footer {
@@ -198,6 +203,7 @@ i {
 	border-style: solid;
 	border-width: 3px;
 	border-color: #292929;
+	border-radius: 20px;
 }
 
 td {

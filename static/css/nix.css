@@ -2,6 +2,7 @@ body {
 	background-color: #000;
 	color: #fff;
 	font-family: 'Courier', monospace;
+	font-display: swap;
 	font-size: 20px;
 	min-height: 100vh;
 	position: relative;
@@ -23,10 +24,12 @@ img {
 
 .font-header {
 	font-family: 'Consolas', monospace;
+	font-display: swap;
 }
 
 .font-paragraph {
 	font-family: 'Open Sans', sans-serif;
+	font-display: swap;
 }
 
 .navbar-dark .navbar-brand {
@@ -37,6 +40,7 @@ img {
 .cursor-text {
     position: relative;
     font-family: 'Courier', monospace;
+		font-display: swap;
     background-color: #343a40;
     text-decoration: none;
     color: #00ff00;
@@ -87,6 +91,7 @@ img {
 
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'Consolas', monospace;
+	font-display: swap;
 }
 
 @media (max-width: 767px) {

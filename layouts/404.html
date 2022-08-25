@@ -7,7 +7,7 @@
 
 	</head>
 	<body>
-		{{ $cmd := printf "%s%s" "cat ~" .RelPermalink }}
+		{{ $cmd := printf "%s%s" "cat ~" .Page.RelPermalink }}
 		{{ .Scratch.Set "command" $cmd }}
 		{{ partial "header.html" . }}
 		<div class="container wrapper">
